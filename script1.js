@@ -5,18 +5,20 @@
 //  setInterval(print,2000)
 
 // colsure 
-// function outerFunction(){
-//     let a = 0;
-//     function innerFunction(){
-//         a++;
-//         return a;
-//     }
-//     return innerFunction;
-// }
-// const c = outerFunction();
-// console.log(c());
-// console.log(c());
-// console.log(c());
+ function outerFunction(){
+    let a = 0;
+  function innerFunction(){
+         a++;
+        return a;
+    }
+    return innerFunction;
+ }
+const c = outerFunction();
+console.log(c());
+console.log(c());
+console.log(c());
+
+// prototype inhert the value of one value to another value
 //  let car = {
 //     color : 'true',
 //     startsfast(){

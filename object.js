@@ -24,3 +24,6 @@ let a = {
     return key in obj;
  }
   console.log(hasproperty(a, "title"));
+
+
+
