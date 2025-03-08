@@ -20,9 +20,16 @@
             let li = document.createElement("li")
             li.textContent = iteminput.value
             addlist.appendChild(li)
+            let newbutton = document.createElement("button")
+            newbutton.textContent = "Delete"
+            li.appendChild(newbutton);
+            newbutton.onclick = function () {
+                li.remove(); 
+            };
         }
         iteminput.value = ""
       }
+      
     </script>
 
 </body>
