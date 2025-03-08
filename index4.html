@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    
-</body>
+
 </head>
 <body>
     <!-- query Selector -->
@@ -16,10 +15,31 @@
         element.style.backgroundColor = "blue";
     </script>  -->
 
-<div class="Welcome">Navya</div>
+<!-- <div class="Welcome">Navya</div>
 <div class="Welcome">Ganna</div>
 <script>
     let element = document.querySelectorAll(".Welcome");
     element[1].style.backgroundColor = "green"; 
-</script> 
+</script>  -->
+
+<!--  modify HTML DOM  -->
+     <!-- innerHTML -->
+<!-- <div id="myid">this the my content <span>of html</span>
+</div>
+ <script>
+    let elemt = document.getElementById("myid");
+    let content = elemt.innerHTML;
+    alert(content)
+    elemt.innerHTML = "My New Content";
+</script>  -->
+        <!-- textContent -->
+    <div class="mypara"> This element  has <span>spacing</span><p style="display:none">Hidden Text</p></div>
+    <script>
+        let str = document.getElementsByClassName("mypara");
+        let text = str[0].textContent;
+        alert(text)
+        str.textContent = "New Text";
+        alert(str.textContent);
+    </script>
+</body>
 </html>
