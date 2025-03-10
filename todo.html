@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+       
+    </style>
 </head>
 <body>
     <h1>Dynamically Add and list elements</h1>
@@ -17,11 +20,12 @@
 
       function addfun() {
         if(iteminput.value !== "") {
-            let li = document.createElement("li")
-            li.textContent = iteminput.value
-            addlist.appendChild(li)
-            let newbutton = document.createElement("button")
-            newbutton.textContent = "Delete"
+            let li = document.createElement("li");
+            li.textContent = iteminput.value;
+            addlist.appendChild(li);
+            let newbutton = document.createElement("button");
+            newbutton.textContent = "Delete";
+            newbutton.classList.add("delete");
             li.appendChild(newbutton);
             newbutton.onclick = function () {
                 li.remove(); 
