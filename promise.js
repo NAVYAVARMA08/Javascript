@@ -10,6 +10,8 @@
 //  .catch((error)=>{
 // console.log(error + "reject")})
 
+// ------------------------------------------------------
+
 // const mypromise = new Promise((resolve,reject)=>{
 //     const randomnum = Math.random();
 //     if (randomnum>0.5){
@@ -31,7 +33,8 @@
 
 // advanced promises
 
-// promise.all()
+// promise.all()-----------------------------
+
 // let p1 = new Promise((resolve,reject)=>{
 //     setTimeout(resolve("first"),1000)
 // })
@@ -48,7 +51,7 @@
 // .catch((error)=>
 //     {console.log(error)})
 
-// promise.allSettled()
+// promise.allSettled()---------------------
 
 // let p1 = new Promise((resolve,reject)=>{
 //     setTimeout(resolve("first"),1000)
@@ -81,7 +84,7 @@
 // .catch((error)=>
 //     {console.log(error)})
 
-// promise.race()
+// promise.race()-------------------------
 
 let p1 = new Promise((resolve,reject)=>{
     setTimeout(reject("first"),1000)
