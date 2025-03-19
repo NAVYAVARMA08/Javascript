@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="fetchP()">Fetch From Server</button>
+    <script>
+        function fetchP() {
+        let url = "https://jsonplaceholder.typicode.com/posts";
+        let data = fetch(url).then((res)=>{return res.json()}).then((data)=>{console.log(data)}).catch((error)=>{console.log(error)})
+        data.forEach((data1)=>{
+            var lilist = document.createElement('li');
+            lilist.textContent =`${data1.name}`
+            ullist.appendChild(lilist)
+        })
+        }
+    </script>
+</body>
+</html>

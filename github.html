@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub User Fetch</title>
+</head>
+<body>
+    <input type="text" id="input" placeholder="Enter GitHub username">
+    <button onclick="getGitHubUser()">Fetch GitHub User Data</button>
+    <div id="parent"></div>
+
+    <script>
+        function getGitHubUser() {
+            let username = document.getElementById("input").value.trim();
+
+            const url = `https://api.github.com/users/${username}`;
+
+            fetch(url)
+                .then(response => {
+                    return response.json();
+                })
+                .then(userData => {
+                    console.log("User data:", userData);
+
+                    let parentEle = document.getElementById("parent");
+                    parentEle.innerHTML = ""; 
+
+                    let nameEl = document.createElement("h1");
+                    nameEl.textContent = userData.login 
+
+                    let anchorEl = document.createElement("a");
+                    anchorEl.href = userData.html_url;
+                    anchorEl.textContent = "Go to GitHub"; 
+                    anchorEl.target = "_blank";
+
+                    parentEle.appendChild(nameEl);
+                    parentEle.appendChild(anchorEl);
+                })
+                .catch(error => {
+                    console.log("Error fetching user data:", error);
+                });
+        }
+    </script>
+</body>
+</html>
